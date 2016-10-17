@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.chetan.tranc_dice2.MainActivity">
+
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Your Score:"
+        android:id="@+id/ys_text"
+        android:textSize="20dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Computer Score:"
+        android:id="@+id/textView"
+        android:textSize="20dp"
+        android:layout_below="@+id/ys_text"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:id="@+id/ys"
+        android:textSize="20dp"
+        android:editable="false"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/textView"
+        android:layout_toEndOf="@+id/textView" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:id="@+id/cs"
+        android:textSize="20dp"
+        android:layout_below="@+id/ys"
+        android:layout_toRightOf="@+id/lastCS"
+        android:layout_toEndOf="@+id/lastCS" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageView"
+        android:layout_marginTop="45dp"
+        android:src="@drawable/dice1"
+        android:layout_below="@+id/textView"
+        android:layout_toEndOf="@+id/ys_text" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/roll_button"
+        android:text="Roll"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:onClick="roll_dice"
+        android:clickable="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hold"
+        android:id="@+id/hold_button"
+        android:layout_alignTop="@+id/roll_button"
+        android:layout_centerHorizontal="true"
+        android:onClick="hold_dice"
+        android:clickable="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Reset"
+        android:id="@+id/rest_button"
+        android:layout_alignBottom="@+id/hold_button"
+        android:layout_alignParentEnd="true"
+        android:onClick="reset_dice"
+        android:clickable="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Your Last Dice Score:"
+        android:id="@+id/lastYS"
+        android:textSize="20dp"
+        android:layout_alignTop="@+id/lastYS1"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Comp Last Dice Score:"
+        android:id="@+id/lastCS"
+        android:textSize="20dp"
+        android:layout_below="@+id/lastYS"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:id="@+id/lastYS1"
+        android:textSize="20dp"
+        android:layout_marginTop="36dp"
+        android:layout_below="@+id/imageView"
+        android:layout_toLeftOf="@+id/lastCS1"
+        android:layout_toStartOf="@+id/lastCS1" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:id="@+id/lastCS1"
+        android:textSize="20dp"
+        android:layout_below="@+id/lastYS1"
+        android:layout_toRightOf="@+id/imageView"
+        android:layout_toEndOf="@+id/imageView" />
+</RelativeLayout>
